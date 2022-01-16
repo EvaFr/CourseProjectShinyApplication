@@ -13,3 +13,5 @@ This is the final assignment of the Developing Data Products Course from Johns H
 1. Share your server.R and ui.R code on github
 
 The shiny app: https://evafr.shinyapps.io/CourseProject/
+
+The documentation: https://rpubs.com/EvaFr/855900    (please wait some minutes to load)

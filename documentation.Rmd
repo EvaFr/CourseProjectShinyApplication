@@ -1,0 +1,62 @@
+---
+title: "Documentation"
+author: "Eva Katai"
+date: "1/16/2022"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Assignment
+
+This is the final assignment of the Developing Data Products Course from Johns Hopkins University Data Science Specialization. This is the scope:
+
+1. Write a shiny application with associated supporting documentation. The documentation should be thought of as whatever a user will need to get started using your application.
+1. Deploy the application on Rstudio's shiny server
+1. Share the application link by pasting it into the provided text box
+1. Share your server.R and ui.R code on github
+
+## Dataset
+
+The dataset is the standard mtcars. 
+
+```{r dataset, echo = TRUE}
+head(mtcars)
+```
+
+## Results
+
+[the shiny webapp.](https://evafr.shinyapps.io/CourseProject/)
+
+[github repository.](https://github.com/EvaFr/CourseProjectShinyApplication)
+
+In the "Select variable for comparison" box please choose the suitable variable, 
+and push the submit button.
+After it, the program will draw the new model.
+
+## Algorithm
+
+The algorithm is the linear model function, that predicts the Miles Per Gallon based on the other  variable of the dataset. For example: 
+"Number of cylinders" = "cyl"\
+"Displacement" = "disp"\
+"Gross horsepower" = "hp"\
+"Rear axle ratio" = "drat"\
+"Weight (lb/1000)" = "wt"\
+"1/4 mile time" = "qsec"\
+"V/S" = "vs"\
+"Transmission" = "am"\
+"Number of gears" = "gear"
+    
+## For example:
+
+```{r algorithm, echo = TRUE}
+fit <- lm(mpg ~ wt, mtcars)
+with(mtcars,    {plot(mpg~wt)
+                abline(fit, col=2)})
+fit
+```
+
+
+
